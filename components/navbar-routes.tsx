@@ -1,9 +1,10 @@
 "use client";
 
-import { UserButton } from "@clerk/nextjs";
+// import { UserButton } from "@clerk/nextjs";
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 import { LogOut } from "lucide-react";
+import { ModeToggle } from "./mode-toggle";
 import Link from "next/link";
 
 export const NavbarRoutes = () => {
@@ -28,7 +29,8 @@ export const NavbarRoutes = () => {
           </Button>
         </Link>
       )}
-      <UserButton afterSignOutUrl="/" />
+      {/* <UserButton afterSignOutUrl="/" /> */}
+      <ModeToggle />
     </div>
   );
 };
